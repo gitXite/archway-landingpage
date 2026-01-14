@@ -2,23 +2,23 @@
 const features = [
   {
     icon: "fingerprint",
-    title: "Your visual identity, preserved",
-    description: "The AI doesn't just make renders—it makes your renders. Trained specifically on your body of work to maintain brand consistency."
+    title: "Din visuelle identitet, bevart",
+    description: "AI-en lager ikke bare renderinger, den lager dine renderinger. Trent spesielt på dine prosjekter for å iverata firmaets visuelle identitet."
   },
   {
     icon: "zap",
-    title: "From sketch to render in seconds",
-    description: "What used to take hours or days now happens in moments. Focus on design, not on wrestling with rendering software."
+    title: "Fra konsept til render på sekunder",
+    description: "Det som tidligere tok timer eller dager, gjøres nå på sekunder. Fokuser på arkitektur, ikke Blender."
   },
   {
     icon: "refresh",
-    title: "Iterate without limits",
-    description: "Don't like the lighting? Want a different angle? Regenerate variations instantly. Explore options you never had time for."
+    title: "Placeholder",
+    description: "Placeholder"
   },
   {
     icon: "lock",
-    title: "Your work stays yours",
-    description: "Your projects are never used to train models for others. Your creative DNA is protected and private to your firm."
+    title: "Verket ditt forblir ditt",
+    description: "Dine prosjekter blir aldri brukt til å trene modeller for andre. Ditt kreative DNA er beskyttet og privat for ditt firma."
   }
 ];
 
@@ -31,22 +31,19 @@ const icons = {
 };
 ---
 
-<section id="features" class="py-24 lg:py-32">
+<section id="funksjonalitet" class="py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
     <div class="grid lg:grid-cols-2 gap-16 items-start">
-      <!-- Left: Headline -->
       <div class="lg:sticky lg:top-32">
-        <p class="text-sm font-medium tracking-widest uppercase text-muted-foreground mb-4">Features</p>
+        <p class="text-sm font-medium tracking-widest uppercase text-muted-foreground mb-4">Funksjonalitet</p>
         <h2 class="text-3xl sm:text-4xl font-serif tracking-tight mb-6">
-          Built for the way architects actually work
+          Bygget for arkitekter
         </h2>
         <p class="text-lg text-muted-foreground leading-relaxed">
-          We talked to over 100 firms before writing a single line of code. Every feature exists because you asked
-          for it.
+          Vi snakket med flere arkitekter før vi skrev en eneste linje kode. Hver funksjon finnes fordi dere ba om den.
         </p>
       </div>
 
-      <!-- Right: Feature Grid -->
       <div class="grid gap-8">
         {features.map((feature) => (
           <div class="group p-6 rounded-lg border border-border bg-card hover:bg-secondary/50 transition-colors">
