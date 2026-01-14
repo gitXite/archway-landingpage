@@ -1,0 +1,40 @@
+---
+const testimonials = [
+  {
+    quote: "We used to spend 3-4 days on client presentation renders. Now it's 20 minutes. The quality is indistinguishable from our traditional workflow.",
+    author: "Sarah Chen",
+    role: "Principal, Studio Forma"
+  },
+  {
+    quote: "Our clients can't believe how quickly we iterate on design concepts now. It's changed how we work—and how we win projects.",
+    author: "Marcus Rodriguez",
+    role: "Design Director, RAD Architects"
+  },
+  {
+    quote: "The AI actually learned our lighting preferences and material palette. Every render feels like it came from our studio because it did.",
+    author: "Elena Kovač",
+    role: "Founder, Atelier K"
+  }
+];
+---
+
+<section class="py-24 lg:py-32 bg-foreground text-background">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <p class="text-sm font-medium tracking-widest uppercase text-background/60 mb-4">Testimonials</p>
+      <h2 class="text-3xl sm:text-4xl font-serif tracking-tight">Loved by design professionals</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {testimonials.map((testimonial) => (
+        <div class="bg-background/5 backdrop-blur-sm rounded-lg p-6 border border-background/10">
+          <p class="text-background/90 leading-relaxed mb-6 text-pretty">"{testimonial.quote}"</p>
+          <div class="border-t border-background/10 pt-4">
+            <p class="font-medium text-background">{testimonial.author}</p>
+            <p class="text-sm text-background/60">{testimonial.role}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

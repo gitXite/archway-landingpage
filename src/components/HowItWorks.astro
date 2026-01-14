@@ -1,0 +1,40 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Train on your portfolio",
+    description: "Upload 5-10 completed projects. Our AI learns your firm's visual DNA—materials, lighting, composition, style."
+  },
+  {
+    number: "02",
+    title: "Upload sketch + reference",
+    description: "Drop in a floor plan, elevation, or rough sketch. Add a reference photo for the setting or mood."
+  },
+  {
+    number: "03",
+    title: "Instant, branded renders",
+    description: "Receive photorealistic renders that look unmistakably like your work. Iterate and refine in real-time."
+  }
+];
+---
+
+<section id="how-it-works" class="py-24 lg:py-32 bg-secondary/30">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <p class="text-sm font-medium tracking-widest uppercase text-muted-foreground mb-4">How it works</p>
+      <h2 class="text-3xl sm:text-4xl font-serif tracking-tight">Three steps to your signature renders</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+      {steps.map((step) => (
+        <div class="relative">
+          <div class="mb-4">
+            <span class="text-5xl font-serif text-muted-foreground/20">{step.number}</span>
+          </div>
+          <h3 class="text-xl font-medium mb-3">{step.title}</h3>
+          <p class="text-muted-foreground leading-relaxed">{step.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,80 @@
+---
+---
+
+<section class="pt-32 pb-20 lg:pt-40 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <!-- Left: Copy -->
+      <div class="space-y-8">
+        <div class="space-y-6">
+          <p class="text-sm font-medium tracking-widest uppercase text-muted-foreground">For Architects</p>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif tracking-tight text-balance leading-[1.1]">
+            Renders that look like <span class="italic">yours</span>
+          </h1>
+          <p class="text-lg text-muted-foreground max-w-lg leading-relaxed">
+            Upload a drawing and a reference. Get a stunning render in seconds—trained on your firm's completed
+            projects to match your signature aesthetic. No prompting. No arguing with AI.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button class="cursor-pointer inline-flex items-center justify-center gap-2 rounded-md bg-primary px-8 py-3 text-base font-medium text-primary-foreground hover:bg-primary/90 transition-colors">
+            Get started
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </button>
+          <button class="cursor-pointer inline-flex items-center justify-center rounded-md border border-border bg-transparent px-8 py-3 text-base font-medium hover:bg-secondary transition-colors">
+            View pricing
+          </button>
+        </div>
+
+        <!-- Social Proof -->
+        <div class="pt-4 flex items-center gap-4 text-sm text-muted-foreground">
+          <div class="flex -space-x-2">
+            {[1, 2, 3, 4].map(() => (
+              <div class="w-8 h-8 rounded-full bg-secondary border-2 border-background" />
+            ))}
+          </div>
+          <span>Trusted by 500+ architecture firms worldwide</span>
+        </div>
+      </div>
+
+      <!-- Right: Visual Demo -->
+      <div class="relative">
+        <div class="aspect-4/3 bg-secondary rounded-lg overflow-hidden relative">
+          <!-- Input sketch overlay -->
+          <div class="absolute inset-0 flex">
+            <!-- Sketch side -->
+            <div class="w-1/2 bg-card border-r border-border p-4 flex flex-col justify-center">
+              <span class="text-xs font-medium text-muted-foreground mb-2">Input</span>
+              <div class="flex flex-1 bg-secondary rounded border border-dashed border-border justify-center">
+                <img class="" src="/line-drawing.png" alt="line drawing">
+                <!-- <svg viewBox="0 0 100 80" class="w-full h-full p-6 text-muted-foreground/30">
+                  Simple architectural sketch lines
+                  <rect x="10" y="30" width="80" height="45" fill="none" stroke="currentColor" stroke-width="0.5" />
+                  <line x1="10" y1="30" x2="50" y2="10" stroke="currentColor" stroke-width="0.5" />
+                  <line x1="90" y1="30" x2="50" y2="10" stroke="currentColor" stroke-width="0.5" />
+                  <rect x="25" y="45" width="15" height="30" fill="none" stroke="currentColor" stroke-width="0.5" />
+                  <rect x="60" y="50" width="20" height="15" fill="none" stroke="currentColor" stroke-width="0.5" />
+                </svg> -->
+              </div>
+            </div>
+            <!-- Render side -->
+            <div class="w-1/2 p-4 flex flex-col justify-center">
+              <span class="text-xs font-medium text-muted-foreground mb-2">Output</span>
+              <div class="flex justify-center flex-1 rounded overflow-hidden bg-linear-to-br from-muted to-accent/20">
+                <img class="" src="/render.jpg" alt="render">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating badge -->
+        <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-card shadow-lg rounded-full px-4 py-2 border border-border">
+          <span class="text-sm font-medium">Generated in 4.2s</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
