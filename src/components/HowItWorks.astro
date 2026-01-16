@@ -2,13 +2,13 @@
 const steps = [
   {
     number: "01",
-    title: "Trener på deres portefølje",
-    description: "Last opp 10-50 ferdigstilte prosjekter. AI-modellen lærer firmaets DNA - materialer, lyssetting, komposisjon og stil."
+    title: "Last opp deres portefølje",
+    description: "Last opp 10-50 tidligere prosjekter. AI-modellen lærer firmaets DNA - materialer, lyssetting, komposisjon og stil."
   },
   {
     number: "02",
-    title: "Klar for bruk",
-    description: "Legg inn en fasade eller grov skisse, og et referansebilde hvis du ønsker å justere miljø eller stemning."
+    title: "Input og referanse",
+    description: "Legg inn en fasade eller grov skisse, og et referansebilde for finjustering."
   },
   {
     number: "03",
@@ -29,7 +29,7 @@ const steps = [
       {steps.map((step) => (
         <div class="relative">
           <div class="mb-4">
-            <span class="text-5xl font-serif text-muted-foreground/20">{step.number}</span>
+            <span class="text-5xl font-serif text-accent/90">{step.number}</span>
           </div>
           <h3 class="text-xl font-medium mb-3">{step.title}</h3>
           <p class="text-muted-foreground leading-relaxed">{step.description}</p>
