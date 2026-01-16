@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PriceComponent from '../components/PriceComponent.astro';
+import PriceHeader from '../components/PriceHeader.astro';
+import '../styles/global.css';
+---
+
+<Layout title='Priser' description='Se våre priser og betalingsplaner'>
+    <main class="min-h-screen bg-background">
+        <PriceHeader />
+        <PriceComponent />
+    </main>
+</Layout>
