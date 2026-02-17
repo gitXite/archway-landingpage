@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 /* Architectural theme - clean, sophisticated, monochromatic with warm stone accent */
@@ -45,8 +46,9 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-  }
+        @apply bg-background text-foreground font-sans antialiased;
+        font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    }
 }
 
 /* Smooth scroll behavior */
