@@ -1,4 +1,5 @@
 ---
+
 ---
 
 <section class="pt-32 pb-20 lg:pt-40 lg:pb-32" id="hero">
@@ -40,6 +41,34 @@
       </div>
 
       <div class="relative">
+        <div class="flex aspect-4/3 bg-secondary rounded-lg overflow-hidden relative">
+          <div class="flex flex-col p-4 aspect-4/3">
+            <div class="flex w-full justify-between">
+              <span class="relative text-xs font-medium text-muted-foreground mb-2">Input</span>
+              <span class="relative text-xs font-medium text-muted-foreground mb-2">Output</span>
+            </div>
+            <div class="diff h-full rounded border border-border" tabindex="0">
+              <div class="diff-item-1" role="img" tabindex="0">
+                <img src="/line-drawing.webp" alt="Input">
+              </div>
+
+              <div class="diff-item-2" role="img">
+                <img src="/render.webp" alt="Output">
+              </div>
+
+              <div class="diff-resizer">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="absolute z-10 -bottom-4 left-1/2 -translate-x-1/2 bg-card shadow-lg rounded-full px-4 py-2 border border-border">
+          <span class="text-sm font-medium">Generert på <span class="text-accent">12s</span></span>
+        </div>
+      </div>
+
+      <!-- <div class="relative">
         <div class="aspect-4/3 bg-secondary rounded-lg overflow-hidden relative">
           <div class="absolute inset-0 flex">
             <div class="w-1/2 bg-card border-r border-border p-4 flex flex-col justify-center">
@@ -55,11 +84,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
-        <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-card shadow-lg rounded-full px-4 py-2 border border-border">
-          <span class="text-sm font-medium">Generert på <span class="text-accent">12s</span></span>
-        </div>
+        
       </div>
     </div>
   </div>
