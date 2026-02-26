@@ -1,20 +1,46 @@
 ---
-const { plan, description, price, subscription, link, binding } = Astro.props;
+const { name, price, period, description, features } = Astro.props;
 ---
 
-<div class="flex flex-col w-65 h-85 justify-between bg-card shadow-sm border border-border rounded-md text-center px-6 py-8 pointer-events-none">
-    <p class="text-muted-foreground text-sm leading-relaxed text-pretty">{description}</p>
-    <div class="flex flex-col gap-4">
-        <div class="flex flex-col mt-5 items-center">
-            <p class="text-foreground tracking-tight text-lg font-bold">{price}</p>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-foreground my-2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-            </svg>
-            <p class="text-foreground tracking-tight text-md">{subscription}</p>
-            <p class="text-muted-foreground text-sm mt-2">{binding}</p>
+<div class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm border border-border/60">
+    <div class="gap-2 px-6 pb-3">
+        <div class="text-base font-medium">
+            {name}
         </div>
-        <a href={link} class="cursor-pointer pointer-events-auto inline-flex items-center justify-center rounded-md px-4 py-2 hover:bg-secondary border hover:border-border border-transparent transition-colors">
-            <h2 class="font-bold bg-linear-to-r from-[#ff9a4d] via-[#ff5c5c] to-[#e91e63] bg-clip-text text-transparent tracking-tight text-lg">{plan}</h2>
-        </a>
+        <div className='flex items-baseline gap-0.5 mt-1'>
+            <span class='text-2xl font-semibold text-foreground'>
+                {price}
+            </span>
+            <span class='text-sm text-muted-foreground'>
+                {period}
+            </span>
+        </div>
+        <div class="text-muted-foreground text-sm mt-1">
+            {description}
+        </div>
+    </div>
+    <div class"flex-1 flex flex-col px-6">
+        <ul class='space-y-2 flex-1'>
+            {features.map((f) => (
+                <li
+                    key={f}
+                    class='flex items-center gap-2 text-sm text-muted-foreground'
+                >
+                    <Check class='h-3.5 w-3.5 text-foreground shrink-0' />
+                        {f}
+                </li>
+            ))}
+        </ul>
+        <div class='mt-5'>
+            {price === "Custom" ? (
+                <a href="/" class='w-full gap-1.5 hover:bg-secondary cursor-pointer'>
+                    Kontakt Oss{' '}
+                </a>
+            ) : (
+                <a href="/" class="w-full cursor-pointer">
+                    Velg
+                </a>
+            )
+        </div>
     </div>
 </div>
