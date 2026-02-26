@@ -21,8 +21,8 @@ const { name, price, period, description, features } = Astro.props;
             {description}
         </div>
     </div>
-    <div class"flex-1 flex flex-col w-full">
-        <ul class='space-y-2 flex-1'>
+    <div class="flex-1 flex flex-col w-full">
+        <ul class="space-y-2 flex-1">
             {features.map((f) => (
                 <li
                     key={f}
@@ -32,7 +32,7 @@ const { name, price, period, description, features } = Astro.props;
                 </li>
             ))}
         </ul>
-        <div class='mt-5 w-full'>
+        <div class="mt-5 w-full self-end">
             {price === "Custom" ? (
                 <a href="/" class='h-10 px-4 py-2 inline-flex items-center justify-center text-sm font-medium w-full gap-1.5 border border-input hover:bg-secondary cursor-pointer rounded-md transition-colors'>
                     Kontakt Oss{' '}
