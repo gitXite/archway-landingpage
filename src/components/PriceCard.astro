@@ -28,6 +28,9 @@ const { name, price, period, description, features } = Astro.props;
                     key={f}
                     class='flex items-center gap-2 text-sm text-muted-foreground'
                 >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 376 384">
+                        <path fill="currentColor" d="M119 282L346 55l29 30l-256 256L0 222l30-30z" />
+                    </svg>
                     {f}
                 </li>
             ))}
