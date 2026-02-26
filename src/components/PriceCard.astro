@@ -2,8 +2,8 @@
 const { name, price, period, description, features } = Astro.props;
 ---
 
-<div class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm border border-border/60">
-    <div class="gap-2 px-6 pb-3">
+<div class="bg-card text-card-foreground flex flex-col h-[430px] w-[330px] gap-6 rounded-xl border py-6 px-6 shadow-sm border border-border/60">
+    <div class="gap-2 pb-3">
         <div class="text-base font-medium">
             {name}
         </div>
@@ -19,7 +19,7 @@ const { name, price, period, description, features } = Astro.props;
             {description}
         </div>
     </div>
-    <div class"flex-1 flex flex-col px-6">
+    <div class"flex-1 flex flex-col">
         <ul class='space-y-2 flex-1'>
             {features.map((f) => (
                 <li
