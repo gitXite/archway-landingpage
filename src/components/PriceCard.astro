@@ -34,11 +34,11 @@ const { name, price, period, description, features } = Astro.props;
         </ul>
         <div class="mt-5 w-full self-end">
             {price === "Custom" ? (
-                <a href="/" class='h-10 px-4 py-2 inline-flex items-center justify-center text-sm font-medium w-full gap-1.5 border border-input hover:bg-secondary cursor-pointer rounded-md transition-colors'>
+                <a href="/" class='h-10 px-4 py-2 inline-flex items-center justify-center text-sm font-medium w-full gap-1.5 border border-input hover:bg-secondary cursor-pointer rounded-lg transition-colors'>
                     Kontakt Oss{' '}
                 </a>
             ) : (
-                <a href="/" class="h-10 px-4 py-2 inline-flex items-center justify-center text-sm font-medium w-full bg-primary text-primary-foreground hover:bg-primary/90 cursor-pointer rounded-md transition-colors">
+                <a href="/" class="h-10 px-4 py-2 inline-flex items-center justify-center text-sm font-medium w-full bg-primary text-primary-foreground hover:bg-primary/90 cursor-pointer rounded-lg transition-colors">
                     Velg
                 </a>
             )
