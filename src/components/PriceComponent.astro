@@ -3,32 +3,61 @@ import PriceCard from './PriceCard.astro'
 
 const cards = [
     {
-        plan: "Fleksibel",
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores quibusdam aperiam provident harum.',
-        price: 'TBD',
-        subscription: 'TBD',
-        link: '/',
-        binding: 'Ingen binding'
+        name: 'Individuell',
+        price: 'NOK 499',
+        period: '/mnd',
+        description: 'For individuelle arkitekter.',
+        features: [
+            '50 renderinger / mnd',
+            '1 LoRA modell',
+            '5 prosjekter',
+            '720p output',
+            'Email support',
+        ],
     },
     {
-        plan: "Premium",
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores quibusdam aperiam provident harum.',
-        price: 'TBD',
-        subscription: 'TBD',
-        link: '/',
-        binding: '1 år bindingstid'
-    }
+        name: 'Profesjonell',
+        price: 'NOK 1499',
+        period: '/mnd',
+        description: 'For bedrifter og kontorer.',
+        features: [
+            'Ubegrensede renderinger',
+            '5 LoRA modeller',
+            'Ubegrensede prosjekter',
+            '4K output',
+            'Email support',
+            'Admin tilgang',
+        ],
+    },
+    {
+        name: 'Enterprise',
+        price: 'Custom',
+        period: '',
+        description: 'For større bedrifter med spesialtilpassede behov.',
+        features: [
+            'Ubegrensede Renderinger',
+            'Ubegrensede LoRA modeller',
+            'Ubegrensede prosjekter',
+            '4K output',
+            'Dedikert støtte',
+            'Custom integrasjoner',
+        ],
+    },
 ];
 ---
 
 <section class="flex flex-col min-h-screen bg-background sm:justify-around items-center py-24 px-5">
     <div class="flex flex-col items-center mb-12 sm:mb-0">
-        <p class="font-medium tracking-widest uppercase text-muted-foreground mb-4">Priser</p>
-        <h1 class="text-3xl sm:text-4xl font-serif tracking-tight text-center">Se våre priser og betalingsplaner</h1>
+        <p class="font-medium tracking-widest uppercase text-muted-foreground mb-4">
+            Priser
+        </p>
+        <h1 class="text-3xl sm:text-4xl font-serif tracking-tight text-center">
+            Se våre priser og betalingsplaner
+        </h1>
     </div>
     <div class="flex flex-col sm:flex-row w-full space-y-15 sm:space-x-25 sm:space-y-0 justify-center items-center sm:relative sm:bottom-12">
         {cards.map((card) => (
-            <PriceCard plan={card.plan} description={card.description} subscription={card.subscription} price={card.price} link={card.link} binding={card.binding} />
+            <PriceCard name={card.name} price={card.price} period={card.period} description={card.description} features={card.features} />
         ))}
     </div>
 </section>
