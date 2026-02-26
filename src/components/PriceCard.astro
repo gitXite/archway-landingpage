@@ -26,8 +26,7 @@ const { name, price, period, description, features } = Astro.props;
                     key={f}
                     class='flex items-center gap-2 text-sm text-muted-foreground'
                 >
-                    <Check class='h-3.5 w-3.5 text-foreground shrink-0' />
-                        {f}
+                    {f}
                 </li>
             ))}
         </ul>
