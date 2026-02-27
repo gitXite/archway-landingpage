@@ -2,14 +2,14 @@
 const { name, price, period, description, features } = Astro.props;
 ---
 
-<div class="bg-card text-card-foreground flex flex-col h-[430px] w-[330px] gap-6 rounded-xl border py-6 px-6 shadow-sm border border-border/60 transition-all hover:ring-1 hover:ring-foreground">
+<div class="bg-card text-card-foreground flex flex-col h-[430px] w-[330px] gap-6 rounded-xl py-6 px-6 shadow-sm border border-border/60 transition-all hover:ring-1 hover:ring-foreground">
     <div class="gap-2 pb-3">
-        <div className='flex items-center justify-between'>
+        <div class='flex items-center justify-between'>
             <div class="text-base font-medium pb-2">
                 {name}
             </div>
         </div>
-        <div className='flex items-baseline gap-0.5 mt-1 pb-2'>
+        <div class='flex items-baseline gap-0.5 mt-1 pb-2'>
             <span class='text-2xl font-semibold text-foreground'>
                 {price}
             </span>
@@ -23,9 +23,8 @@ const { name, price, period, description, features } = Astro.props;
     </div>
     <div class="flex-1 flex flex-col w-full">
         <ul class="space-y-2 flex-1">
-            {features.map((f) => (
+            {features.map((f: string) => (
                 <li
-                    key={f}
                     class='flex items-center gap-2 text-sm text-muted-foreground'
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 376 384">
@@ -37,14 +36,17 @@ const { name, price, period, description, features } = Astro.props;
         </ul>
         <div class="mt-5 w-full self-end">
             {price === "Custom" ? (
-                <a href="/" class='h-10 px-4 py-2 inline-flex items-center justify-center text-sm font-medium w-full gap-1.5 border border-input hover:bg-secondary cursor-pointer rounded-lg transition-colors'>
+                <a href="/" class='h-10 px-4 py-2 inline-flex items-center justify-center text-sm font-medium w-full gap-1.5 border border-input bg-background hover:bg-secondary cursor-pointer rounded-lg transition-colors'>
                     Kontakt Oss{' '}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 15 15">
+                        <path fill="currentColor" fill-rule="evenodd" d="M3.646 11.354a.5.5 0 0 1 0-.707L10.293 4H6a.5.5 0 0 1 0-1h5.5a.5.5 0 0 1 .5.5V9a.5.5 0 0 1-1 0V4.707l-6.646 6.647a.5.5 0 0 1-.708 0Z" clip-rule="evenodd"/>
+                    </svg>
                 </a>
             ) : (
                 <a href="/" class="h-10 px-4 py-2 inline-flex items-center justify-center text-sm font-medium w-full bg-primary text-primary-foreground hover:bg-primary/90 cursor-pointer rounded-lg transition-colors">
                     Velg
                 </a>
-            )
+            )}
         </div>
     </div>
 </div>
