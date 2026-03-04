@@ -15,6 +15,7 @@ const cards = [
             '1024x1024 oppløsning',
             'Email support',
         ],
+        popular: false,
     },
     {
         name: 'Profesjonell',
@@ -30,6 +31,7 @@ const cards = [
             'Email support',
             'Admin tilgang',
         ],
+        popular: true,
     },
     {
         name: 'Enterprise',
@@ -45,6 +47,7 @@ const cards = [
             'Dedikert støtte',
             'Tilpassede integrasjoner',
         ],
+        popular: false,
     },
 ];
 ---
@@ -60,7 +63,7 @@ const cards = [
     </div>
     <div class="flex flex-col sm:flex-row w-full space-y-15 sm:space-x-25 sm:space-y-0 justify-center items-center sm:relative sm:bottom-12">
         {cards.map((card) => (
-            <PriceCard name={card.name} price={card.price} period={card.period} description={card.description} features={card.features} />
+            <PriceCard name={card.name} price={card.price} period={card.period} description={card.description} features={card.features} popular={card.popular} />
         ))}
     </div>
 </section>
