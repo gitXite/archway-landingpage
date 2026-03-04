@@ -35,15 +35,15 @@ const { name, price, period, description, features } = Astro.props;
             ))}
         </ul>
         <div class="mt-5 w-full self-end">
-            {price === "Custom" ? (
-                <a href="/" class='h-10 px-4 py-2 inline-flex items-center justify-center text-sm font-medium w-full gap-1.5 border border-input bg-background hover:bg-secondary cursor-pointer rounded-lg transition-colors'>
+            {name === "Custom" ? (
+                <a href="https://app.archway.no/kontakt" class='h-10 px-4 py-2 inline-flex items-center justify-center text-sm font-medium w-full gap-1.5 border border-input bg-background hover:bg-secondary cursor-pointer rounded-lg transition-colors'>
                     Kontakt Oss{' '}
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 15 15">
                         <path fill="currentColor" fill-rule="evenodd" d="M3.646 11.354a.5.5 0 0 1 0-.707L10.293 4H6a.5.5 0 0 1 0-1h5.5a.5.5 0 0 1 .5.5V9a.5.5 0 0 1-1 0V4.707l-6.646 6.647a.5.5 0 0 1-.708 0Z" clip-rule="evenodd"/>
                     </svg>
                 </a>
             ) : (
-                <a href="/" class="h-10 px-4 py-2 inline-flex items-center justify-center text-sm font-medium w-full bg-primary text-primary-foreground hover:bg-primary/90 cursor-pointer rounded-lg transition-colors">
+                <a href="https://app.archway.no/registrering" class="h-10 px-4 py-2 inline-flex items-center justify-center text-sm font-medium w-full bg-primary text-primary-foreground hover:bg-primary/90 cursor-pointer rounded-lg transition-colors">
                     Velg
                 </a>
             )}
