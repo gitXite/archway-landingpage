@@ -8,12 +8,14 @@ const cards = [
         period: '/mnd',
         description: 'For individuelle arkitekter.',
         features: [
-            '50 visualiseringer / mnd',
-            '1 LoRA modell',
+            '200 visualiseringer / mnd',
+            'Ingen LoRA',
+            '1 bruker',
             '5 prosjekter',
-            '720p output',
+            '1024x1024 oppløsning',
             'Email support',
         ],
+        popular: false,
     },
     {
         name: 'Profesjonell',
@@ -25,10 +27,11 @@ const cards = [
             '5 LoRA modeller',
             'Ubegrensede prosjekter',
             'Opptil 30 brukere',
-            '4K output',
+            '2K oppløsning',
             'Email support',
             'Admin tilgang',
         ],
+        popular: true,
     },
     {
         name: 'Enterprise',
@@ -40,10 +43,11 @@ const cards = [
             'Ubegrensede LoRA modeller',
             'Ubegrensede prosjekter',
             'Ubegrensede brukere',
-            '4K output',
+            '4K oppløsning',
             'Dedikert støtte',
             'Tilpassede integrasjoner',
         ],
+        popular: false,
     },
 ];
 ---
@@ -59,7 +63,7 @@ const cards = [
     </div>
     <div class="flex flex-col sm:flex-row w-full space-y-15 sm:space-x-25 sm:space-y-0 justify-center items-center sm:relative sm:bottom-12">
         {cards.map((card) => (
-            <PriceCard name={card.name} price={card.price} period={card.period} description={card.description} features={card.features} />
+            <PriceCard name={card.name} price={card.price} period={card.period} description={card.description} features={card.features} popular={card.popular} />
         ))}
     </div>
 </section>
